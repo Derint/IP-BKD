@@ -59,6 +59,15 @@ router.get("/new-test/:id", (req, res) => {
   });
 });
 
+router.get("/new-i-guess/:id", (req, res) => {
+  const userId = req.params.id;
+  res.json({
+    id: userId,
+    name: `TEST_${userId}`,
+    email: `TEST__${userId}@example.com`,
+  });
+});
+
 app.use("/ip-bkd", router);
 
 app.listen(PORT, () => {
