@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-rate-limit-deployment
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-rate-limit
+  template:
+    metadata:
+      labels:
+        app: node-rate-limit
+    spec:
+      containers:
+        - name: node-rate-limit
+          image: ghcr.io/derint/ip-bkd:latest
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: ghcr-secret
+      dnsPolicy: ClusterFirst
