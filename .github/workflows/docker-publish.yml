@@ -11,7 +11,7 @@ jobs:
 
     env:
       # Declare the image name with the new name: ml-ai-tr-pipeline
-      IMAGE_NAME: ghcr.io/derint/ml-ai-bkd # Use the custom name "ml-ai-tr-pipeline"
+      IMAGE_NAME: ghcr.io/derint/ip-bkd # Use the custom name "ml-ai-tr-pipeline"
 
     steps:
       # Step 1: Checkout the code
