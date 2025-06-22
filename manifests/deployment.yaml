@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: node-rate-limit-deployment
   namespace: test
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: ghcr.io/derint/ip-bkd
+    argocd-image-updater.argoproj.io/ghcr.io_derint_ip-bkd.update-strategy: latest
 spec:
   replicas: 1
   selector:
@@ -16,6 +19,7 @@ spec:
       containers:
         - name: node-rate-limit
           image: ghcr.io/derint/ip-bkd:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
       imagePullSecrets:
