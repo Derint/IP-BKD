@@ -50,33 +50,6 @@ router.get("/user/:id", (req, res) => {
   });
 });
 
-router.get("/user-etsing/sd/:id", (req, res) => {
-  const userId = req.params.id;
-  res.json({
-    id: userId,
-    name: `User_${userId}`,
-    email: `user_${userId}@example.com`,
-  });
-});
-
-router.get("/new-test/:id", (req, res) => {
-  const userId = req.params.id;
-  res.json({
-    id: userId,
-    name: `TEST_${userId}`,
-    email: `TEST__${userId}@example.com`,
-  });
-});
-
-router.get("/new-i-guess/:id", (req, res) => {
-  const userId = req.params.id;
-  res.json({
-    id: userId,
-    name: `TEST_${userId}`,
-    email: `TEST__${userId}@example.com`,
-  });
-});
-
 app.use("/ip-bkd", router);
 
 app.listen(PORT, () => {
