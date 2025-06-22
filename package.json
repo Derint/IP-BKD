@@ -1,0 +1,13 @@
+{
+    "name": "node-rate-limit-app",
+    "version": "1.0.0",
+    "description": "Node.js app with IP-based rate limiting and header logging",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "express-rate-limit": "^6.7.0"
+    }
+}
